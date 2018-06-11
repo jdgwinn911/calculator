@@ -1,2 +1,3 @@
 a simple calculator made from ruby 
-caovers addition,multiplication,division,and subtraction
+covers addition,multiplication,division,and subtraction
+very sloppy but it works!!
