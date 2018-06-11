@@ -1,51 +1,65 @@
-def addition_function
-    puts "what do ya wanna add buddy?"
-    n1 = gets.chomp.to_i
+def calculation     
+    puts "what numbers"
+    n1 = gets.chomp.to_i   # gets.chomp.to_i to convert it to integer
     n2 = gets.chomp.to_i
+    return_array = []      # creates an empty array 
+    return_array  << n1    # adds value of variable to array
+    return_array  << n2    # ^^^^^^^^^^ 
+    return_array 
+end
+
+def addition_function()    # the function used for addition
+    numbers = calculation 
+    n1 = numbers[0]
+    n2 = numbers[1]
+    
     answer = n1 + n2
     puts "the sum is...#{answer}"
 end
 
-def subtraction_function
+def subtraction_function() # the function used for subtraction  
     puts "what do ya wanna subtract buddy?"
-    n1 = gets.chomp.to_i
-    n2 = gets.chomp.to_i
+    numbers = calculation
+    n1 = numbers[0]
+    n2 = numbers[1]
     answer = n1 - n2
     puts "the answer is...#{answer}"
 end
 
-def multiplication_function
+def multiplication_function()  # the multiplication function
     puts "what do ya wanna multiply?"
-    n1 = gets.chomp.to_i
-    n2 = gets.chomp.to_i
+    numbers = calculation
+    n1 = numbers[0]
+    n2 = numbers[1]
     answer = n1 * n2 
     puts "the answer is...#{answer}"
 end
 
-def division_function
+def division_function()    # the function used for division 
     puts "what do ya wanna divide buddy?"
-    n1 = gets.chomp.to_i
-    n2 = gets.chomp.to_i
+    numbers = calculation
+    n1 = numbers[0]
+    n2 = numbers[1]
     answer = n1 / n2
     puts "the answer is...#{answer}"
 end
 
 puts "would you like to [add],[subtract],[multiply],[divide]?"
 
-response = gets.chomp
-if response == "add" then
+response = gets.chomp    # gets the response
+if response == "add" 
     addition_function
 end
 
-if response == "subtract" then 
+if response == "subtract" 
     subtraction_function
 end
 
-if response == "multiply" then
+if response == "multiply" 
     multiplication_function
 end
 
-if response == "divide" then 
+if response == "divide"
     division_function
 end 
 
